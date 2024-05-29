@@ -1,0 +1,29 @@
+﻿<Window x:Class="KikeletPanzio.SzobakUjWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KikeletPanzio"
+        mc:Ignorable="d"
+        Title="Új Szoba Felvitele - Kikelet Panzió" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Content="Új Szoba Felvitele" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+            <Label Content="Szobaszám" HorizontalAlignment="Center"></Label>
+            <TextBox Name="tbx_szobaszam" Width="50"></TextBox>
+            <Label Content="Férőhely" HorizontalAlignment="Center"></Label>
+            <TextBox Name="tbx_ferohely" Width="50"></TextBox>
+            <Label Content="Ár 1 éjszakára és 1 főre" HorizontalAlignment="Center"></Label>
+            <TextBox Name="tbx_ar" Width="100"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Műveletek" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+            <Button Name="btn_regisztral" Content="Regisztrál" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Regisztral_Click"></Button>
+            <Button Name="btn_megse" Content="Mégse" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Megse_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

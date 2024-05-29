@@ -1,0 +1,26 @@
+﻿<Window x:Class="KikeletPanzio.UgyfelekWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KikeletPanzio"
+        mc:Ignorable="d"
+                Title="Ügyfelek - Kikelet Panzió" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Content="Ügyfelek" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+            <DataGrid Name="dgr_ugyfelek" SelectionChanged="Dgr_Ugyfelek_SelectionChanged"></DataGrid>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Műveletek" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+            <Button Name="btn_uj_szoba" Content="Új Ügyfél Felvitele" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Uj_Ugyfel_Click"></Button>
+            <Button Name="btn_modositas" Content="Kiválasztott Módosítása" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Modositas_Click" IsEnabled="False"></Button>
+            <Button Name="btn_torles" Content="Kiválasztott Törlése" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Torles_Click" IsEnabled="False"></Button>
+            <Button Name="btn_bezaras" Content="Bezár" Width="100" Height="30" Margin="20" Padding="5" Click="Btn_Bezaras_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

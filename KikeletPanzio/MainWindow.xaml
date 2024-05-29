@@ -1,0 +1,16 @@
+﻿<Window x:Class="KikeletPanzio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KikeletPanzio"
+        mc:Ignorable="d"
+        Title="Főoldal - Kikelet Panzió" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Text="Kikelet Panzió" FontWeight="Bold" FontSize="48" Margin="20" TextAlignment="Center"></TextBlock>
+        <Button Name="btn_szobak" Content="Szobák" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Szobak_Click"></Button>
+        <Button Name="btn_regisztracio" Content="Ügyfelek" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Regisztracio_Click"></Button>
+        <Button Name="btn_foglalas" Content="Foglalások" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Foglalas_Click"></Button>
+        <Button Name="btn_statisztikak" Content="Statisztikák" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Statisztikak_Click"></Button>
+    </StackPanel>
+</Window>

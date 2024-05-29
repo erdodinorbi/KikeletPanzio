@@ -1,0 +1,38 @@
+﻿<Window x:Class="KikeletPanzio.FoglalasokUjWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KikeletPanzio"
+        mc:Ignorable="d"
+        Title="Új Szoba Foglalása - Kikelet Pnazió" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Content="Új Szoba Foglalása" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+            <Label Content="Szobaszám" HorizontalAlignment="Center"></Label>
+            <ComboBox Name="cbx_szobaszam" Width="100" SelectionChanged="Cbx_Szobaszam_SelectionChanged"></ComboBox>
+            <Label Content="Név" HorizontalAlignment="Center"></Label>
+            <TextBox Name="tbx_nev" Width="200"></TextBox>
+            <Label Content="Érkezés időpontja" HorizontalAlignment="Center"></Label>
+            <DatePicker Name="dtpk_erkezes" Width="150" SelectedDateChanged="Foglalasok_Window_Selection_Changed"></DatePicker>
+            <Label Content="Távozás időpontja" HorizontalAlignment="Center"></Label>
+            <DatePicker Name="dtpk_tavozas" Width="150" SelectedDateChanged="Foglalasok_Window_Selection_Changed"></DatePicker>
+            <Label Content="Hány főre" HorizontalAlignment="Center"></Label>
+            <ComboBox Name="cbx_fo" Width="100" SelectionChanged="Foglalasok_Window_Selection_Changed"></ComboBox>
+            <Label Content="Éjszakák száma" HorizontalAlignment="Center"></Label>
+            <ComboBox Name="cbx_ejszaka" Width="100" SelectionChanged="Foglalasok_Window_Selection_Changed"></ComboBox>
+            <TextBlock Name="tbk_fizetendo" Text="Fizetendő: 0 Ft" TextAlignment="Center" Margin="0,10,0,0"></TextBlock>
+            <Label Content="Állapot" HorizontalAlignment="Center"></Label>
+            <ComboBox Name="cbx_allapot" Width="100"></ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Műveletek" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+            <Button Name="btn_foglalas" Content="Foglalás" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Foglalas_Click"></Button>
+            <Button Name="btn_megse" Content="Mégse" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Megse_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

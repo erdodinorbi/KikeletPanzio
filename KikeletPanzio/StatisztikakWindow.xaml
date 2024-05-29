@@ -1,0 +1,34 @@
+﻿<Window x:Class="KikeletPanzio.StatisztikakWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KikeletPanzio"
+        mc:Ignorable="d"
+        Title="Statisztikák - Kikelet Panzió" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Content="Statisztikák" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Label Content="Összes Bevétel (tól-ig):"></Label>
+                <TextBlock Name="tbk_osszes_bevetel"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Label Content="Legtöbbet kiadott szoba:"></Label>
+                <TextBlock Name="tbk_legtobbet_kiadott_szoba"></TextBlock>
+            </StackPanel>
+            <StackPanel Margin="20">
+                <Label Content="Visszajáró vendégek:"></Label>
+                <ListBox Name="lstbx_visszajaro_vendegek" Width="250" HorizontalAlignment="Left"></ListBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Műveletek" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+            <Button Name="btn_bezaras" Content="Bezár" Width="100" Height="30" Margin="20" Padding="5" Click="Btn_Bezaras_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="KikeletPanzio.UgyfelekWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KikeletPanzio"
+        mc:Ignorable="d"
+        Title="Ügyfelek - Kikelet Panzió" Height="450" Width="800">
+    <StackPanel>
+        <Label Content="Új Ügyfél Felvitele" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+        <Label Content="Név" HorizontalAlignment="Center"></Label>
+        <TextBox Name="tbx_nev" Width="200"></TextBox>
+        <Label Content="Születési dátum" HorizontalAlignment="Center"></Label>
+        <DatePicker Name="dtpk_szuletesi_datum" Width="150"></DatePicker>
+        <Label Content="Email cím" HorizontalAlignment="Center"></Label>
+        <TextBox Name="tbx_email" Width="300"></TextBox>
+        <Label Content="VIP ügyfél" HorizontalAlignment="Center"></Label>
+        <CheckBox Name="chbx_vip" HorizontalAlignment="Center"></CheckBox>
+        <Button Name="btn_regisztral" Content="Regisztrál" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Regisztral_Click"></Button>
+        <Label Content="Ügyfelek" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+        <DataGrid Name="dgr_ugyfelek"></DataGrid>
+        <Button Name="btn_torles" Content="Kiválasztott törlése" Width="150" Height="30" Margin="20" Padding="5" Click="Btn_Torles_Click"></Button>
+    </StackPanel>
+</Window>
